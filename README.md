@@ -57,9 +57,6 @@ This is a simple RESTful API built with **Node.js**, **Express**, and **MongoDB*
 ├── README.md                # Project documentation
 
 ```
-Yes! You can include tables in a README.md file using GitHub-flavored Markdown. The table will render properly on GitHub and other Markdown-supported platforms.
-
-Here’s how the API Endpoints section should look in your README.md file:
 
 ## API Endpoints  
 
@@ -74,7 +71,7 @@ Here’s how the API Endpoints section should look in your README.md file:
 
 | Method | Endpoint  | Description         | Authentication |
 |--------|----------|---------------------|---------------|
-| DELETE | `/delete` | Delete user account | ✅ (JWT)      |
+| DELETE | `api/user/:id` | Delete user account | ✅ (JWT)      |
 
 
 ## Setup Guide  
