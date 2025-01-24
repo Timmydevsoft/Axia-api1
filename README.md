@@ -27,6 +27,39 @@ This is a simple RESTful API built with **Node.js**, **Express**, and **MongoDB*
 
 ---
 
+
+## Project Structure  
+
+```bash
+/project-root
+├── config/  
+│   ├── db.connect.js        # MongoDB connection setup  
+│  
+├── controllers/  
+│   ├── auth.controller.js   # Handles account creation and login  
+│   ├── user.controller.js   # Handles user account deletion  
+│  
+├── middlewares/  
+│   ├── auth.middleware.js   # Verifies user authentication before account deletion  
+│   ├── error.middleware.js  # Handles errors and prevents app crashes  
+│   ├── errorHandler.js      # Sends appropriate error messages to users  
+│  
+├── models/  
+│   ├── user.model.js        # Defines the User schema  
+│  
+├── routes/  
+│   ├── auth.route.js        # Routes for authentication (signup, login)  
+│   ├── user.route.js        # Routes for user-related actions (account deletion)  
+│  
+├── index.js                 # Main entry point of the application  
+├── package.json             # Project dependencies  
+├── package-lock.json        # Dependency lock file  
+├── README.md                # Project documentation
+
+```
+
+
+
 ## Setup Guide  
 
 ```sh
