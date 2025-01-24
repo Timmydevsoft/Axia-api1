@@ -9,6 +9,8 @@ const signUp = async (req, res, next) => {
     if (!username || !email || !password) {
       return next(handleError(403, "email, username or password cannot be empty"))
     }
+    const isAuser = await User.findOne({email})
+    if(isAuser) return next(handleError(400, "User already exist"))
     const hashedPassword =  bcrypt.hashSync(password, 10);
     const newUser = new User({
       username,
@@ -58,19 +60,8 @@ const signIn = async (req, res, next) => {
   }
 };
 
-const verifyUser = (req, res) => {
-  res.status(200).json(req.user);
-};
-
-const refreshAccessToken = (req, res) => {
-  res.status(200).json({token: req.accessToken});
-};
-
-
 
 export {
   signUp,
-  signIn,
-  verifyUser,
-  refreshAccessToken,
+  signIn
 };
