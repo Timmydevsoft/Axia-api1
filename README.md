@@ -73,7 +73,8 @@ This is a simple RESTful API built with **Node.js**, **Express**, and **MongoDB*
 |--------|----------|---------------------|---------------|
 | DELETE | `api/user/:id` | Delete user account | ✅ (JWT)      |
 
-
+## Note:
+#### Please note that if a user account has been deleted and the user is trying to use same token to delete his/her account again, the auth middle ware will catch the error and will send a response to the clien that the account does not exist, so no need for the check in deleteUser function inside user.controller.js
 ## Setup Guide  
 
 ```sh
