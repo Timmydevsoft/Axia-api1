@@ -56,21 +56,10 @@ const signIn = async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-};
-
-const verifyUser = (req, res) => {
-  res.status(200).json(req.user);
-};
-
-const refreshAccessToken = (req, res) => {
-  res.status(200).json({token: req.accessToken});
-};
-
+}
 
 
 export {
   signUp,
-  signIn,
-  verifyUser,
-  refreshAccessToken,
+  signIn
 };
